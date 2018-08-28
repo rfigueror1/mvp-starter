@@ -1,0 +1,1 @@
+"analytical" 0.653099,"sadness" 0.564854,"analytical" 0.863228,"joy" 0.54853,"confident" 0.937689,"analytical" 0.965706,"confident" 0.932568,"joy" 0.643869,"fear" 0.536162,

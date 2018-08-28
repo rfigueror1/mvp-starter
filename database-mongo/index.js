@@ -1,31 +1,28 @@
 var mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost/test');
+autoIncrement = require('mongoose-auto-increment');
+mongoose.connect('mongodb://localhost/tweetsdb');
 
 var db = mongoose.connection;
-
-db.on('error', function() {
-  console.log('mongoose connection error');
-});
-
+db.on('error', console.error.bind(console, 'connection error:'));
 db.once('open', function() {
-  console.log('mongoose connected successfully');
-});
-
-var itemSchema = mongoose.Schema({
-  quantity: Number,
-  description: String
-});
-
-var Item = mongoose.model('Item', itemSchema);
-
-var selectAll = function(callback) {
-  Item.find({}, function(err, items) {
-    if(err) {
-      callback(err, null);
-    } else {
-      callback(null, items);
-    }
+  // we're connected!
+  var tweetSchema = mongoose.Schema({
+  word: String,
+  number_of_tweets: Number
   });
-};
 
-module.exports.selectAll = selectAll;
+  autoIncrement.initialize(db);
+
+  var Tweet = mongoose.model('Tweet', tweetSchema);
+
+  tweetSchema.plugin(autoIncrement.plugin, {
+    model: 'Tweet',
+    field: 'id',
+    startAt: 0,
+    incrementBy: 1
+  });
+
+  //var tweet1 = new Tweet({user_data:'Rodrigo Figueroa', tweetText:'hi, just a tweet test'});
+  //Tweet.create(tweet1);
+  module.exports.Tweet = Tweet;
+});

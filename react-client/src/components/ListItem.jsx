@@ -2,7 +2,8 @@ import React from 'react';
 
 const ListItem = (props) => (
   <div>
-    { props.item.description }
+    { props.item.name }
+    { props.item.average} 
   </div>
 )
 

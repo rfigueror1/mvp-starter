@@ -16,23 +16,24 @@ Oh, and I also like to write press-releases in what I call "Oprah-speak" for mai
 Once the project moves into development, the press release can be used as a touchstone; a guiding light. The product team can ask themselves, "Are we building what is in the press release?" If they find they're spending time building things that aren't in the press release (overbuilding), they need to ask themselves why. This keeps product development focused on achieving the customer benefits and not building extraneous stuff that takes longer to build, takes resources to maintain, and doesn't provide real customer benefit (at least not enough to warrant inclusion in the press release).
  -->
  
-## Heading ##
-  > Name the product in a way the reader (i.e. your target customers) will understand.
+##PSA nalysis that a 4 yr old understands##
 
-## Sub-Heading ##
-  > Describe who the market for the product is and what benefit they get. One sentence only underneath the title.
+##Description of the product##
+  The product is intended to provide a simple but graphical description of a sentiment related to the general feeling regarding a public figure or event.
 
 ## Summary ##
-  > Give a summary of the product and the benefit. Assume the reader will not read anything else so make this paragraph good.
+  - The product uses an artificial intelligence API to analyze comments on Twitter made by common people about a public figure.
+  - The product has a very simple but fun interface that tells the user what the general sentiment about the public figure is.
 
 ## Problem ##
-  > Describe the problem your product solves.
+  - My product is able to translate big quantities of data from comments about an event/public figure into simple classifications and transmit that to the user in very simple terms.
 
 ## Solution ##
-  > Describe how your product elegantly solves the problem.
+  - The product promps the user with a text.
+  - Once the user provides the text, it gathers large quantities of data from Twitter API, uses Natural Language Processsing from an AI API and translates the results into a very simple set of graphic expressions.
 
 ## Quote from You ##
-  > A quote from a spokesperson in your company.
+  - This product is able to 
 
 ## How to Get Started ##
   > Describe how easy it is to get started.
